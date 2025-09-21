@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - Cajero Virtual</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="center-screen">
+  <div class="auth-card">
+    <h1>🏧 Cajero Virtual</h1>
+    <h2>Registrarse</h2>
+    <form id="registerForm" class="form">
+      <input id="regNombre" type="text" placeholder="Nombre" required />
+      <input id="regApellido" type="text" placeholder="Apellido" required />
+      <input id="regDocumento" type="text" placeholder="Documento" required />
+      <input id="regUsuario" type="text" placeholder="Usuario" required />
+      <input id="regContrasena" type="password" placeholder="Contraseña" required />
+      <select id="regTipoCuenta">
+        <option value="ahorros">Cuenta Ahorros</option>
+        <option value="corriente">Cuenta Corriente</option>
+      </select>
+      <button type="submit" class="btn full">Crear Cuenta</button>
+      <p id="regMsg" class="msg"></p>
+    </form>
+    <p class="small">¿Ya tienes cuenta? <a href="index.html">Inicia sesión</a></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (registrarUsuario()) {
+        document.getElementById("regMsg").style.color = "green";
+        document.getElementById("regMsg").textContent = "Usuario creado con éxito";
+        setTimeout(() => window.location.href = "index.html", 1500);
+      } else {
+        document.getElementById("regMsg").textContent = "Error al registrar";
+      }
+    });
+  </script>
+</body>
+</html>

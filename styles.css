@@ -1,0 +1,120 @@
+/* Fondo general */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+/* ======== LOGIN/REGISTRO ======== */
+.auth-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.auth-card {
+  background: white;
+  padding: 15rem;
+  border-radius: 100px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+  width: 670px;
+  text-align: center;
+}
+.auth-card h1 {
+  margin-bottom: 1rem;
+}
+.tabs {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.tab {
+  flex: 1;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  background: #e6ecf3;
+  border-radius: 6px 6px 0 0;
+}
+.tab.active {
+  background: #0f62fe;
+  color: white;
+}
+.tab-content {
+  text-align: left;
+}
+.form input, .form select {
+  width: 100%;
+  margin-bottom: 0.8rem;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.btn {
+  background: #0f62fe;
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn.full {
+  width: 100%;
+}
+.btn.danger {
+  background: #e74c3c;
+}
+.msg {
+  font-size: 0.9rem;
+  color: red;
+  height: 1rem;
+}
+
+/* ======== DASHBOARD ======== */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 240px;
+  background: #0f62fe;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar h2 {
+  margin-top: 0;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.sidebar .btn {
+  background: rgba(255,255,255,0.1);
+  color: white;
+  text-align: left;
+}
+.sidebar .btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background: #f0f4f8;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.log {
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}

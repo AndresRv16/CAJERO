@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Cajero Virtual</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="center-screen">
+  <div class="auth-card">
+    <h1>CAJERO VIRTUAL - M2</h1>
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm" class="form">
+      <input id="loginUser" type="text" placeholder="Usuario" required />
+      <input id="loginPass" type="password" placeholder="Contraseña" required />
+      <button type="submit" class="btn full">Entrar</button>
+      <p id="loginMsg" class="msg"></p>
+    </form>
+    <p class="small">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // login básico → si es correcto, va a home.html
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const user = loginUser.value.trim();
+      const pass = loginPass.value.trim();
+      if (login(user, pass)) {
+        window.location.href = "home.html";
+      } else {
+        document.getElementById("loginMsg").textContent = "Usuario o contraseña incorrectos";
+      }
+    });
+  </script>
+</body>
+</html>
